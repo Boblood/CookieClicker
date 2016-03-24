@@ -35,7 +35,17 @@ namespace CCModel.Controller
 
         public BigInteger GetNewPrice(int currentNumberOfBuildings, int desiredNumberOfBuildings)
         {
-            return (BigInteger)Math.Ceiling((BasePrice * (Math.Pow(1.15, desiredNumberOfBuildings) - Math.Pow(1.15, currentNumberOfBuildings))) / .15);
+            BigInteger result = 0,
+                basePrice = BasePrice,
+                basePower = 15,
+                desiredBuildings = desiredNumberOfBuildings,
+                currentBuildings = currentNumberOfBuildings;
+
+            //result = BigInteger.Multiply(basePrice, BigInteger.Subtract(BigInteger.Pow(1.15, desiredBuildings), ))
+
+
+            return result;
+            //return (BigInteger)Math.Ceiling((BasePrice * (Math.Pow(1.15, desiredNumberOfBuildings) - Math.Pow(1.15, currentNumberOfBuildings))) / .15);
         }
 
         public void Sell(int number)

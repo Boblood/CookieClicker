@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Numerics;
 using CCModel.Controller;
 
 namespace CookieClickerUnitTest
@@ -45,8 +46,9 @@ namespace CookieClickerUnitTest
         {
             var testCurser = new CurserManager();
             testCurser.NumberOfBuildings = 400;
+            BigInteger answer = BigInteger.Parse("28525114772292825768936023");
 
-            Assert.AreEqual(testCurser.CurrentPrice, 28525114772292825768936023d);
+            Assert.AreEqual(testCurser.CurrentPrice, answer);
         }
     }
 }
