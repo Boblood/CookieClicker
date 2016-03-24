@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 using CCModel.Model;
 
 namespace CCModel.Controller
@@ -17,7 +18,7 @@ namespace CCModel.Controller
             }
         }
 
-        public double CurrentPrice
+        public BigInteger CurrentPrice
         {
             get
             {
@@ -25,22 +26,16 @@ namespace CCModel.Controller
             }
         }
 
-        public int NumberOfBuildings
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public int NumberOfBuildings { get; set; }
 
         public void Buy(int number)
         {
             throw new NotImplementedException();
         }
 
-        public double GetNewPrice(int currentNumberOfBuildings, int desiredNumberOfBuildings)
+        public BigInteger GetNewPrice(int currentNumberOfBuildings, int desiredNumberOfBuildings)
         {
-            return Math.Ceiling((BasePrice * (Math.Pow(1.15, desiredNumberOfBuildings) - Math.Pow(1.15, currentNumberOfBuildings))) / .15);
+            return (BigInteger)Math.Ceiling((BasePrice * (Math.Pow(1.15, desiredNumberOfBuildings) - Math.Pow(1.15, currentNumberOfBuildings))) / .15);
         }
 
         public void Sell(int number)
