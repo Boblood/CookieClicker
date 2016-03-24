@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CookieClicker.Controller
+namespace CCModel.Controller
 {
-    public class CPSManager
+    public class CookieBankManager
     {
-        public double CurrentCPS { get; set; }
-
+        public double NumberOfCookies { get; set; }
     }
 }

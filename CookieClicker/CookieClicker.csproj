@@ -98,13 +98,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controller\BuildingManager.cs" />
-    <Compile Include="Controller\CookieBankManager.cs" />
-    <Compile Include="Controller\CPSManager.cs" />
-    <Compile Include="Controller\CurserManager.cs" />
-    <Compile Include="Controller\UpgradeManager.cs" />
-    <Compile Include="Model\Interfaces\IBuildingManager.cs" />
-    <Compile Include="Model\Interfaces\IUpgrade.cs" />
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

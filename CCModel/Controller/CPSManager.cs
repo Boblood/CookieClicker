@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CookieClicker.Controller
+namespace CCModel.Controller
 {
-    public class UpgradeManager
+    public class CPSManager
     {
-        bool[] Upgrades = new bool[152];
+        public double CurrentCPS { get; set; }
+
     }
 }

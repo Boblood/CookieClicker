@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CookieClicker.Model;
-using CookieClicker.Model.Interfaces;
+using CCModel.Model;
 
-namespace CookieClicker.Controller
+namespace CCModel.Controller
 {
     public class CurserManager : IBuildingManager
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CookieClicker.Model.Interfaces
+namespace CCModel.Model
 {
     public interface IBuildingManager
     {
