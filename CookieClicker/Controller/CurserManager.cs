@@ -10,11 +10,11 @@ namespace CookieClicker.Controller
 {
     public class CurserManager : IBuildingManager
     {
-        public double BasePrice
+        public int BasePrice
         {
             get
             {
-                return 10;
+                return 15;
             }
         }
 
@@ -22,7 +22,7 @@ namespace CookieClicker.Controller
         {
             get
             {
-                return GetNewPrice();
+                return GetNewPrice(NumberOfBuildings, NumberOfBuildings + 1);
             }
         }
 
@@ -34,44 +34,24 @@ namespace CookieClicker.Controller
             }
         }
 
-        public void Buy1()
+        public void Buy(int number)
         {
             throw new NotImplementedException();
         }
 
-        public void Buy10()
+        public double GetNewPrice(int currentNumberOfBuildings, int desiredNumberOfBuildings)
         {
-            throw new NotImplementedException();
+            return Math.Ceiling((BasePrice * (Math.Pow(1.15, desiredNumberOfBuildings) - Math.Pow(1.15, currentNumberOfBuildings))) / .15);
         }
 
-        public void Buy100()
-        {
-            throw new NotImplementedException();
-        }
-
-        public double GetNewPrice()
-        {
-            return Math.Ceiling(BasePrice * Math.Pow(1.15, NumberOfBuildings));
-        }
-
-        public void Sell1()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Sell10()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Sell100()
+        public void Sell(int number)
         {
             throw new NotImplementedException();
         }
 
         public void SellAll()
         {
-            throw new NotImplementedException();
+            Sell(NumberOfBuildings);
         }
     }
 }

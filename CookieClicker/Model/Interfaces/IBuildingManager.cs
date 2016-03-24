@@ -8,17 +8,13 @@ namespace CookieClicker.Model.Interfaces
 {
     public interface IBuildingManager
     {
-        double BasePrice { get; }
+        int BasePrice { get; }
         double CurrentPrice { get; }
         int NumberOfBuildings { get; }
 
-        double GetNewPrice();
-        void Buy1();
-        void Buy10();
-        void Buy100();
-        void Sell1();
-        void Sell10();
-        void Sell100();
+        double GetNewPrice(int currentNumberOfBuildings, int desiredNumberOfBuildings);
+        void Buy(int number);
+        void Sell(int number);
         void SellAll();
     }
 }
